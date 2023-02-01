@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="principal">
+        <div class="navbar">
+            <div class="navinterno">
+                <h1> Mis Recetas</h1>
+                
+            </div>
+            <div class="navinterno">
+
+                @Html.ActionLink("Home", "Index", "Home")
+                @Html.ActionLink("Ir a las recetas","Index","Receta")
+                @Html.ActionLink("Create", "Create", "Receta")
+              
+
+            </div>
+        </div>
+
+        <div class="bodyid">
+          }
+            <div class="renderbody">
+                @RenderBody()
+
+            </div>
+
+
+            <div class="sidebarR">
+                @if (IsSectionDefined("SideBar"))
+                {
+                    @RenderSection("SideBar")
+                }
+                @if(IsSectionDefined("SideBarReceta"))
+                {
+                    @RenderSection("SideBarReceta")
+                }
+            </div>
+
+        </div>
+        <div class="footer">
+
+            <h2>Contacto: Hernu@TusMejoresRecetas.com</h2>
+
+        </div>
+
+    </div>
+</body>
+</html>

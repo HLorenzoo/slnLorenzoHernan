@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<h1 style="color:red">@ViewBag.Nombre</h1>
+
+@Html.ActionLink("Ir a las recetas","Index","Receta")
+
+<p>En Costa Rica el desayuno es bastante consistente, y de manera tradicional es común desayunar gallo pinto, una mezcla de especias, arroz y frijoles que se sirve con huevos, queso, natilla, embutidos, platános maduros, tortillas, pan y algún tostel. Este se acompaña bebiendo jugos de fruta, té, aguadulce o, especialmente, café. </p>
+<p>¿Qué es el desayuno americano? El desayuno americano está compuesto por huevos, ya sean fritos o revueltos, bacon y tortitas americanas. Como bebida, suele optarse por el café o zumos de frutas y en ocasiones, en algunos hoteles y restaurantes se complementa con patatas fritas</p>
+
+@section SideBar
+    {
+    <div class="sidebar1">
+        <h2>Bienvenidos!</h2>
+         <img src="~/img/4.jpg" />
+        <img src="~/img/5.jpg" />
+        <img src="~/img/3.jpg" />
+    </div>
+
+}
