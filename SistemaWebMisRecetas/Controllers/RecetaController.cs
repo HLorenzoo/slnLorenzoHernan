@@ -114,5 +114,27 @@ namespace SistemaWebMisRecetas.Controllers
                 return RedirectToAction("Index");
             }
         }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Receta receta = TraerUna(id);
+            return View("Edit", receta);
+        }
+
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult EditConfirmed(int id, Receta receta)
+        {
+            if (id != receta.Id)
+            {
+                return NotFound();
+            }
+            else
+            {
+                context.Entry(receta).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+        }
     }
 }

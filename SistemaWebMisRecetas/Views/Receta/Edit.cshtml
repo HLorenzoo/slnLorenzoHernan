@@ -1,14 +1,15 @@
 ﻿@model SistemaWebMisRecetas.Models.Receta
+
+
 @{
-    ViewData["Title"] = "Creacion de empleados";
+    ViewData["Title"] = "Editar Receta";
 }
 
-<h1>Ingresar un nuevo medico</h1>
-@Html.ActionLink("Volver a Index", "Index", "Receta")
+<h1>Editar los datos de la receta</h1>
 
 @using (Html.BeginForm("Create", "Receta", FormMethod.Post))
 {
-     <p>
+    <p>
         @Html.LabelFor(model => model.Titulo)
         @Html.TextBoxFor(model => model.Titulo)
         @Html.ValidationMessageFor(model => model.Titulo)
@@ -64,9 +65,9 @@
 @section SideBarReceta
     {
     <div class="side">
-        @Html.ActionLink("Home", "Index", "Home")
-        @Html.ActionLink("Ir a las recetas","Index","Receta")
-        @Html.ActionLink("Create", "Create", "Receta")
+            @Html.ActionLink("Home", "Index", "Home")
+            @Html.ActionLink("Ir a las recetas","Index","Receta")
+            @Html.ActionLink("Create", "Create", "Receta")
 
     </div>
     }

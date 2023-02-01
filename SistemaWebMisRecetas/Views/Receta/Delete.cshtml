@@ -1,7 +1,7 @@
 ﻿@model SistemaWebMisRecetas.Models.Receta
 
 @{
-    ViewData["Title"] = "Borrar Empleado";
+    ViewData["Title"] = "Borrar Receta";
 }
 
 
@@ -29,3 +29,12 @@
     <input type="submit" action="Delete" />
     @Html.ActionLink("Volver", "Index", "Receta")
 }
+@section SideBarReceta
+    {
+        <div class="side">
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Ir a las recetas","Index","Receta")
+        @Html.ActionLink("Create", "Create", "Receta")
+
+        </div>
+    }
