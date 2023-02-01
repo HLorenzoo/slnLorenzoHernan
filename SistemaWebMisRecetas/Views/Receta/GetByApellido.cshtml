@@ -60,8 +60,8 @@
         @foreach (var item in Model)
         {
             <p> ID : @Html.DisplayFor(modelItem=>item.Id)</p>
-            @Html.ActionLink("Eliminar", "Delete", "Empleado", new{id=item.Id})
-            @Html.ActionLink("Editar", "Edit", "Empleado", new{id=item.Id})
+            @Html.ActionLink("Eliminar", "Delete", "Receta", new{id=item.Id})
+            @Html.ActionLink("Editar", "Edit", "Receta", new{id=item.Id})
 
         }
     </div>

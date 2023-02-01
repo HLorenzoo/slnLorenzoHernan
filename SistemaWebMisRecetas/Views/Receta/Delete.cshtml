@@ -1,0 +1,31 @@
+﻿@model SistemaWebMisRecetas.Models.Receta
+
+@{
+    ViewData["Title"] = "Borrar Empleado";
+}
+
+
+<h2>Id de la Receta a eliminar : @Model.Id</h2>
+<p>Desea eliminar esta Receta de la base de datos?</p>
+
+@using (Html.BeginForm("Delete", "Receta", FormMethod.Post))
+{
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Titulo)</span>
+        <span>@Html.DisplayFor(model => model.Titulo)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Autor)</span>
+        <span>@Html.DisplayFor(model => model.Autor)</span>
+    </div>
+
+    <div>
+        <span>@Html.DisplayNameFor(model => model.Apellido)</span>
+        <span>@Html.DisplayFor(model => model.Apellido)</span>
+    </div>
+
+    <input type="submit" action="Delete" />
+    @Html.ActionLink("Volver", "Index", "Receta")
+}

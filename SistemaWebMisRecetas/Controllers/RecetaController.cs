@@ -83,5 +83,36 @@ namespace SistemaWebMisRecetas.Controllers
         {
             return context.Recetas.Find(id);
         }
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            Receta receta = context.Recetas.Find(id);
+            if (receta == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return View("Delete", receta);
+            }
+        }
+
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Receta receta = TraerUna(id);
+            if (receta == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                context.Recetas.Remove(receta);
+                context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+        }
     }
 }
